@@ -40,8 +40,8 @@ main {
 #glass {
     display: grid;
     grid-area: glass;
-    width: 150px;
-    height: 200px;
+    width: 250px;
+    height: 300px;
     box-sizing: border-box;
     clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
     background-color: black;
@@ -67,7 +67,9 @@ main {
 
 #ingredient{
     width: 100%;
+    height: 0px;
     transition: height 0.5s;
+    transition-delay: 0.5s;
 }
 
 #ingredient > p{
@@ -85,8 +87,8 @@ main {
 }
 
 #clip-path-border{
-    height: 196px;
-    width: 143px;
+    height: 295px;
+    width: 242px;
     margin-top: 2px;
     margin-left: 4px;
     clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
@@ -95,7 +97,7 @@ main {
 
 
 @media screen and (width < 431px) {
-        .cocktail{
-            width:140px;
-        }
+    .cocktail{
+        width:140px;
+    }
 }

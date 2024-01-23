@@ -4,16 +4,18 @@ putIngredientsInGlass = (ingredients) => {
     console.log(ingredientsElements);
     
     ingredientsElements.innerHTML = "";
-    ingredients.forEach(ingredient => {        
+    
+    let delay = 0.5;
+    ingredients.forEach(ingredient => {
         let ingredientElement = document.createElement("div");
         ingredientElement.id = "ingredient";
-        
-        ingredientsElements.append(ingredientElement);
-        
-        ingredientElement.style.height = `${100 * ingredient.part}px`;
-        ingredientElement.style.backgroundColor = ingredient.color;
         ingredientElement.innerHTML = `<p>${ingredient.part} part of ${ingredient.name}</p>`;
-        
+        ingredientElement.style.backgroundColor = ingredient.color;
+        ingredientsElements.append(ingredientElement);
+        ingredientElement.offsetHeight;
+        ingredientElement.style.height = 30 * ingredient.part > 15 ? `${30 * ingredient.part}px` : "15px";
+        ingredientElement.style.transitionDelay = delay + "s";
+        delay += 0.5;
     });
     
 }
