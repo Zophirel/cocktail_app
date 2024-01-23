@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+
+html{
+    background-color: #edf4f1;
+}
+main {
+    display: grid;
+    grid-template-areas: 
+    ". mainLogo ."
+    ". mainText ."
+    ". cocktails ."
+    ". glass .";
+    font-family: 'Roboto', sans-serif;
+}
+
+#mainLogo {
+    grid-area: mainLogo;
+    margin: 0 auto;
+    height: 300px;
+}
+
+#mainText {
+    grid-area: mainText;
+    text-align: center;
+    font-weight: 900;
+}
+
+#cocktails {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    grid-area: cocktails;
+    justify-content: center;
+    gap: 10px;
+    max-width: 620px; 
+    margin: 0 auto;
+}
+
+#glass {
+    display: grid;
+    grid-area: glass;
+    width: 150px;
+    height: 200px;
+    box-sizing: border-box;
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+    background-color: black;
+    margin: 70px auto;
+  }
+
+.cocktail {
+    border-radius: 10px;
+    height: 50px;
+    width: 200px;
+    background-color: #cddcda;
+}
+
+.cocktail:hover > p{
+    color: #60b1a7;
+}
+
+.cocktail > p {
+    text-align: center;
+    font-weight: bold;   
+    color: #5f6766;
+}
+
+#ingredient{
+    width: 100%;
+    transition: height 0.5s;
+}
+
+#ingredient > p{
+    margin: 0;
+    font-size: 0.7rem;
+    text-wrap: wrap;
+    padding: 0 25px;
+}
+
+#ingredients{
+    display: flex;
+    text-align: center;
+    flex-direction: column-reverse;
+    height: 100%;
+}
+
+#clip-path-border{
+    height: 196px;
+    width: 143px;
+    margin-top: 2px;
+    margin-left: 4px;
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+    background-color: white;
+}
+
+
+@media screen and (width < 431px) {
+        .cocktail{
+            width:140px;
+        }
+}
